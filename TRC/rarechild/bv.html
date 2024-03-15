@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-lg-3 col-md-3">
+                        <div class="col-lg-6 col-md-9">
+                        <div class="gallery" style="">
+                            <img src="{{ product.image.url }}" alt="{{ product.title }}" id="main-image">
+                        </div>
+                    </div>
+                         {% for image in p_image %}
+                        <div class="product-image-main">
+
+                            <img src="{{ image.images.url }}" alt="{{ p.title }} Gallery Image" class="gallery-thumbnail" data-fullsize="{{ image.images.url }}">
+
+                        </div>
+                        {% endfor %}
+</body>
+</html>
